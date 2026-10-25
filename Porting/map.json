@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-fireworks",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/fireworks",
+      "implementation": [
+        "packages/fireworks/src"
+      ],
+      "tests": [
+        "packages/fireworks/src/fireworks-chat-language-model.test.ts",
+        "packages/fireworks/src/fireworks-image-model.test.ts",
+        "packages/fireworks/src/fireworks-provider.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Sources/SwiftAIFireworks/FireworksModels.swift",
+      "Sources/SwiftAIFireworks/FireworksProvider.swift",
+      "Sources/SwiftAIFireworks/ImageInputCapabilities.swift",
+      "Sources/SwiftAIFireworks/OpenAICompatibleChatFireworks.swift"
+    ],
+    "tests": [
+      "Tests/SwiftAIFireworksTests/FireworksProviderTests.swift",
+      "Tests/SwiftAIFireworksTests/FixtureDownloadTransport.swift",
+      "Tests/SwiftAIFireworksTests/TestSupport.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: provider runtime, configuration and focused tests extracted. Existing upstream baseline, capability boundaries and gaps retained.",
+  "canonicalOnlyReferences": [],
+  "canonicalDirectory": "Packages/swift-ai-fireworks"
+}

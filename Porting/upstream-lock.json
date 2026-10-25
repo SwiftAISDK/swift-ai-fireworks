@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/fireworks",
+      "reviewedVersion": "3.0.81",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.fireworks`, `FireworksProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-AbuRUvGdsiGbUKyOrfLFRCEHLKr8f8BcAUCSzPkknEcVxmrEzMfumU2pFru/sp7llpKp89zwnWxTC9jC7+uHoA==",
+      "sourceRef": "npm:@ai-sdk/fireworks@3.0.81",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ]
+}
