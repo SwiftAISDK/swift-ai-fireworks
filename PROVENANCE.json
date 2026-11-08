@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-fireworks",
-  "version": "1.1.0",
-  "releaseID": "weekly-upstream-20261101",
+  "version": "1.1.1",
+  "releaseID": "weekly-upstream-20261108",
   "source": {
-    "commit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
-    "baseCommit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
+    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
     "workingTree": false,
-    "inputsSHA256": "b46f3e07b0a583d6fee81035987d74a06fc5c6109cbdf228144d1172d2c3676e"
+    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
   },
   "dependencies": [
     {
@@ -16,27 +16,27 @@
     },
     {
       "package": "swift-ai-openai-compatible",
-      "from": "1.1.0"
+      "from": "1.2.0"
     }
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261101",
-      "notes": "Portable reasoning passes through every effort except known family restrictions: gpt-oss/glm-5p3/muse-spark reject none, mapping to minimal; nemotron/inkling reject minimal, mapping to low. Explicit provider and raw request effort values bypass portable remapping; typed provider options are parsed before top-level reasoning selection. Reviewed upstream: @ai-sdk/fireworks 3.0.81 to 3.0.85. Validation passed: node Scripts/test-packages.mjs (all 52 owning package suites and the compatibility facade); node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); docs-site check and build (100 pages). Live provider calls were not run.",
-      "compatibility": "Minor release for additive native API; existing static settings and call sites remain compatible. Updated direct dependency minimums are recorded in the manifest. Existing documented JS/framework and native product gaps remain; version-delta review does not imply full parity or live-service testing. Explicit custom authentication skips an unused credential supplier, a deliberate native callback-order adaptation."
+      "id": "weekly-upstream-20261108",
+      "notes": "Internal catalog refactor retains backend routes, file/mask/size policies, one image per call and exact reasoning family maps (gpt-oss/glm-5p3/muse-spark exclude none, nemotron/inkling exclude minimal). Literal readonly maxImagesPerCall becomes getter in declarations; native computed behavior already matches. No changed release tests; request user-agent updated. Reviewed published upstream delta: @ai-sdk/fireworks 3.0.85 to 3.0.90. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
+      "compatibility": "Patch release for behavior/header corrections without new required owning API. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance. Updated direct ranges: swift-ai-openai-compatible 1.1.0 to 1.2.0."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-fireworks",
   "upstream": [
     {
       "name": "@ai-sdk/fireworks",
-      "reviewedVersion": "3.0.85",
+      "reviewedVersion": "3.0.90",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.fireworks`, `FireworksProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
+      "evidence": "`AIProviders.fireworks`, `FireworksProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-zK79Jttpaa/wmsnEf9RGLZAoC1kzl45D40ivrWgBmy2HWAvnJZKX+yW39Xg4NdmWdlxD4DSuhBT67x0UU17GsA==",
-      "sourceRef": "npm:@ai-sdk/fireworks@3.0.85",
-      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "archiveIntegrity": "sha512-C0xpFI1DYfaMoRKZklubckkubXxhtU9Gxs5wMF9YGbPpRwHSnkzEb21okgXPapDzxCLaeF9qh8MTr7+nbOoTcQ==",
+      "sourceRef": "npm:@ai-sdk/fireworks@3.0.90",
+      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "EmbeddingModelV4",
@@ -44,7 +44,7 @@
         "LanguageModelV4",
         "ProviderV4"
       ],
-      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
+      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -75,7 +75,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Sources/SwiftAIFireworks/FireworksProvider.swift",
-      "sha256": "4f2e05629bfb7761dae49bc1d6ec836d0d286c0f989b90bdb7067f8e4da6b30b"
+      "sha256": "c2789480f3d6848c941a0d4e4d869615f237da0ad9ec9010aead6ae9a6714c6c"
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Sources/SwiftAIFireworks/ImageInputCapabilities.swift",
@@ -87,7 +87,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Tests/SwiftAIFireworksTests/FireworksProviderTests.swift",
-      "sha256": "0663261c52be04629f002d20db1249632ebd5a9ae7832623a3e14e5257c5208b"
+      "sha256": "65ab13ea7e66528638a367b4366f4857c09a72ad822bca0781c37dd1eeb36f2b"
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Tests/SwiftAIFireworksTests/FixtureDownloadTransport.swift",
