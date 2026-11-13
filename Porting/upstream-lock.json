@@ -3,13 +3,13 @@
   "packages": [
     {
       "name": "@ai-sdk/fireworks",
-      "reviewedVersion": "3.0.90",
+      "reviewedVersion": "3.0.95",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.fireworks`, `FireworksProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.fireworks`, `FireworksProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-C0xpFI1DYfaMoRKZklubckkubXxhtU9Gxs5wMF9YGbPpRwHSnkzEb21okgXPapDzxCLaeF9qh8MTr7+nbOoTcQ==",
-      "sourceRef": "npm:@ai-sdk/fireworks@3.0.90",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-jbZcfK13l7erfRiE40ynyTSnOycv4TXHTI8hCrry2iMHq4QR4b04Y6r94OauanFAZcrjq8e33PaN7NNUgBpo6g==",
+      "sourceRef": "npm:@ai-sdk/fireworks@3.0.95",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "EmbeddingModelV4",
@@ -17,7 +17,7 @@
         "LanguageModelV4",
         "ProviderV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ]
 }
