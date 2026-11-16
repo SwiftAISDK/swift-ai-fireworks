@@ -1,5 +1,5 @@
 <!-- Generated distribution; edit the canonical repository. -->
-# swift-ai-fireworks 1.1.3
+# swift-ai-fireworks 1.2.0
 
 Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions are in PROVENANCE.json and Porting/.
 
@@ -8,7 +8,7 @@ Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions
 Add this package to your SwiftPM dependencies:
 
 ```swift
-.package(url: "https://github.com/SwiftAISDK/swift-ai-fireworks.git", from: "1.1.3")
+.package(url: "https://github.com/SwiftAISDK/swift-ai-fireworks.git", from: "1.2.0")
 ```
 
 Products: `SwiftAIFireworks`.
@@ -16,25 +16,29 @@ Contribute and report issues in the canonical SwiftAISDK repository.
 
 ## Authored usage guide
 
-# SwiftAIFireworks
+# Fireworks AI for Swift
 
-Swift-native port of `@ai-sdk/fireworks`. Maintained in the canonical SwiftAISDK repository and exported as an independent Swift package.
+`SwiftAIFireworks` adds Fireworks AI to [SwiftAISDK](https://github.com/SwiftAISDK/SwiftAISDK), an independent Swift port of the Vercel AI SDK. It ports `@ai-sdk/fireworks` and supports text generation, text completion, embeddings and image generation.
+
+Provider guide with models, options, streaming and errors:
+
+- [Fireworks AI](https://swiftaisdk.github.io/SwiftAISDK/providers/fireworks/)
+
+## Usage
+
+Add the `SwiftAI` product from `swift-ai-core` and the `SwiftAIFireworks` product from this package to your target, then create the provider:
 
 ```swift
+import SwiftAI
 import SwiftAIFireworks
 
-let provider = try FireworksProvider(configuration: .init(apiKey: "..."))
+let provider = try AIProviders.fireworks(configuration: FireworksProviderSettings())
 ```
 
-Settings accept a custom base URL, headers, query parameters and an injected
-`AITransport`. Models use the common SwiftAIProvider protocols. Existing upstream
-baselines, capabilities and documented gaps remain unchanged.
+By default the provider reads `FIREWORKS_API_KEY` from the environment; values set in `FireworksProviderSettings` take precedence.
 
-Run the standalone suite from the canonical checkout:
+To use every provider through one dependency, add the complete [SwiftAISDK](https://github.com/SwiftAISDK/SwiftAISDK) package instead; see [Install](https://swiftaisdk.github.io/SwiftAISDK/getting-started/install/).
 
-```sh
-swift test --package-path Packages/swift-ai-fireworks
-```
+## Contributing
 
-The canonical repository owns all edits. Distribution manifests and repositories
-are generated from the catalog; see `Porting/map.json` and the canonical provider guide.
+This package is exported from `Packages/swift-ai-fireworks` in the canonical [SwiftAISDK](https://github.com/SwiftAISDK/SwiftAISDK) repository. Open issues and pull requests there.

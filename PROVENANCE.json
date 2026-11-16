@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-fireworks",
-  "version": "1.1.3",
-  "releaseID": "weekly-upstream-20261115",
+  "version": "1.2.0",
+  "releaseID": "upstream-parity-20261116",
   "source": {
-    "commit": "1e543b35e0259a5bda888665dacf2d4a7f1bb0ed",
-    "baseCommit": "1e543b35e0259a5bda888665dacf2d4a7f1bb0ed",
+    "commit": "1c457dea36be42376a6853aecd5c48ffc4942178",
+    "baseCommit": "1c457dea36be42376a6853aecd5c48ffc4942178",
     "workingTree": false,
-    "inputsSHA256": "5508ffc6347bffaed13fb29409eb856df9a7796d3ebdcb6f623d1e8871b52999"
+    "inputsSHA256": "d7b8f52add7828d7e9ed20418fe072e7db03e75483a168bb7f5c34e9d2a04a13"
   },
   "dependencies": [
     {
@@ -21,9 +21,9 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261115",
-      "notes": "Align the versioned request identity with the reviewed published package while retaining native open String model IDs and existing request, response, option, error, stream and telemetry behavior. Derived TypeScript model-ID/catalog reorganizations preserve the existing native runtime policies. Reviewed npm delta: @ai-sdk/fireworks 3.0.95 to 3.0.96. Validation passed: node Scripts/test-packages.mjs (55 owning packages, 2451 owning tests and 1736 compatibility tests), generation checks, 27 tooling tests, isolation/version checks, deterministic exports and minimum-dependency consumers. Documentation check/build passed (104 pages). Publication is gated by exact-source Swift 6.3.3 CI; subsequent public refs and clients are recorded in Docs/ReleaseVerification20261115.json. Paid/live-service checks were not run; this delta does not claim full-package parity.",
-      "compatibility": "Compatible versioned request identity correction; existing public selectors and dependency minimums remain. npm baselines and Swift SemVer are independent."
+      "id": "upstream-parity-20261116",
+      "notes": "`promptCacheKey` and `serviceTier` are renamed like upstream; chat and image requests follow upstream.",
+      "compatibility": "Source-compatible; changes are additive. Request bodies, results, warnings and errors change to match the reviewed upstream package."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-fireworks",
@@ -32,7 +32,7 @@
       "name": "@ai-sdk/fireworks",
       "reviewedVersion": "3.0.96",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.fireworks`, `FireworksProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/WeeklyUpstreamAudit20261115.json",
+      "evidence": "`AIProviders.fireworks`, `FireworksProviderTests.swift`; 2026-11-01 delta: Docs/Archive/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/Archive/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/Archive/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/Archive/WeeklyUpstreamAudit20261115.json",
       "reviewStatus": "imported-reviewed-with-gaps",
       "archiveIntegrity": "sha512-AS7H1Esx8lR7yI39PS4oKmKwOrsSIuIyh97y0K1MsZwdqhCJ2wLhE2gjVXIy59A719y0wKImR7VwVGJajR+alw==",
       "sourceRef": "npm:@ai-sdk/fireworks@3.0.96",
@@ -44,7 +44,7 @@
         "LanguageModelV4",
         "ProviderV4"
       ],
-      "contractReview": "2026-11-15: published source/declarations and exact matching-release tests reviewed separately. Native delta scenarios, per-file dispositions, unchanged-catalog evidence and explicit remaining gaps are recorded in Docs/WeeklyUpstreamAudit20261115.json. Required checks remain a separate gate; no full-package/live-service parity claim."
+      "contractReview": "2026-11-15: published source/declarations and exact matching-release tests reviewed separately. Native delta scenarios, per-file dispositions, unchanged-catalog evidence and explicit remaining gaps are recorded in Docs/Archive/WeeklyUpstreamAudit20261115.json. Required checks remain a separate gate; no full-package/live-service parity claim."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -63,19 +63,19 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Porting/map.json",
-      "sha256": "c48f31020ccc5cec5f3f13f7bb88968de2d59ce3919fcd87d3ed928a11eaba37"
+      "sha256": "c47be2a82a94de787419469bd5d44313a4603b5950000a76e7993ef3fa83d161"
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/README.md",
-      "sha256": "5a5327cba30fb832ac2174b01a8cb942d4690ecc35c23e06ce9fa976cbf02f84"
+      "sha256": "e8f1ab27783d499f4269c9951a30bdf0ed1c4d6fb493fb9176531e4339e3639a"
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Sources/SwiftAIFireworks/FireworksModels.swift",
-      "sha256": "bbf4c6a8a5070c177d7665b5f42435db6065e38c1daad3f5894870afcbf64f4d"
+      "sha256": "6d43043b2415dedca803a5db138d22ea4cb7302882e9ed2bbe5058ffcda4dc5d"
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Sources/SwiftAIFireworks/FireworksProvider.swift",
-      "sha256": "92382cb47b322089054d9051f6b33c85d255d4a588c045f0931a0e62e0d37b75"
+      "sha256": "7e8ed223e68b7a7fedf461085ea9b4a2f08f191c481e8f8ffa34dd0e24b23e38"
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Sources/SwiftAIFireworks/ImageInputCapabilities.swift",
@@ -83,11 +83,15 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Sources/SwiftAIFireworks/OpenAICompatibleChatFireworks.swift",
-      "sha256": "8a2c32896d85b660874ffeac7c779089a3e95d29f150ecdf176296d224ed3b9d"
+      "sha256": "c7a7f2600e5ce8d16e1c7401e39a256a041e9c45c265473544186619291d0618"
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Tests/SwiftAIFireworksTests/FireworksProviderTests.swift",
       "sha256": "e4e437845d66be4f729b518c265822dadfde5c875dcbac5d64ca629e03c595bf"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-fireworks/Tests/SwiftAIFireworksTests/FireworksUpstreamParityTests.swift",
+      "sha256": "15f23d22dac36b98ae86c04fde972d9547150e00f6cd88b3524952569021506d"
     },
     {
       "canonicalPath": "Packages/swift-ai-fireworks/Tests/SwiftAIFireworksTests/FixtureDownloadTransport.swift",

@@ -24,6 +24,7 @@
     ],
     "tests": [
       "Tests/SwiftAIFireworksTests/FireworksProviderTests.swift",
+      "Tests/SwiftAIFireworksTests/FireworksUpstreamParityTests.swift",
       "Tests/SwiftAIFireworksTests/FixtureDownloadTransport.swift",
       "Tests/SwiftAIFireworksTests/TestSupport.swift",
       "Tests/SwiftAIFireworksTests/Weekly20261101BehaviorTests.swift",
