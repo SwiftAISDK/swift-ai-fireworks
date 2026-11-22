@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.0
+## 1.2.1
 
-- `promptCacheKey` and `serviceTier` are renamed like upstream; chat and image requests follow upstream.
-  Compatibility: Source-compatible; changes are additive. Request bodies, results, warnings and errors change to match the reviewed upstream package.
+- Align the provider request identity with @ai-sdk/fireworks 3.0.98 after comparing source, declarations and matching-release tests against 3.0.96. Offline validation passed: node Scripts/test-packages.mjs (56 packages, 3672 owning tests and 1760 compatibility tests), generation, tooling, isolation, and version selection. See Docs/Archive/WeeklyUpstreamAudit20261122.md for retained gaps. Paid provider calls were skipped.
+  Compatibility: Source-compatible request-header update.
